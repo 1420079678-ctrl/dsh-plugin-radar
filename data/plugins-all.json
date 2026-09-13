@@ -1,6 +1,6 @@
 {
  "schema": "dsh-radar/v1",
- "generated_at": "2026-09-13T22:15:41Z",
+ "generated_at": "2026-09-13T22:30:51Z",
  "plugins": [
   {
    "repo": "tt-a1i/archify",
@@ -49026,7 +49026,7 @@
   {
    "repo": "balcoz/dsh-ocr-local",
    "name": "balcoz-dsh-ocr-local",
-   "verdict": "pending",
+   "verdict": "ok",
    "stars": 6,
    "desc": "DeepSeek Harness 本地 OCR 插件：粘贴图片，PP-OCRv5 + ONNX Runtime   识别文字，完全离线，支持 TUI 与 Web \\| Local OCR plugin for DeepSe"
   },
