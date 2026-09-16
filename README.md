@@ -325,10 +325,10 @@ verdict = {p["repo"]: p["verdict"] for p in d["plugins"]}
 DSH 插件社区讨论群（微信群）：插件作者、维护者与使用者都在这里。
 *WeChat group for plugin authors, maintainers and users.*
 
-<img src="assets/community-discussion-20260829.jpg" width="350" alt="DSH 插件社区讨论群 / community QR">
+<img src="assets/community-discussion-20260916.jpg" width="330" alt="DSH 插件社区讨论群 / community QR">
 
-> 二维码 7 天内有效（2026-09-05 前），过期请联系群主。
-> *The QR code expires within 7 days — contact the group owner after that.*
+> 当前为「DSH-Plugins 社区交流 3 群」二维码，7 天内有效（2026-09-23 前），过期请联系群主换新。
+> *Currently the QR for community group #3 — expires 2026-09-23; contact the owner for a fresh one afterwards.*
 
 ## 给插件使用者
 *For Plugin Users*
