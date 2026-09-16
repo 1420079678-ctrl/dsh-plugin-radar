@@ -25,6 +25,14 @@ CURATED = os.path.join(ROOT, 'data', 'awesome-50.json')
 BUNDLES = os.path.join(ROOT, 'data', 'bundles.json')
 SNAP_DIR = os.path.join(ROOT, 'data', 'snapshots')
 REFRESH_LABEL = '每 6 小时自动刷新'
+# 类目/形态英文名（双语标题副行；一行中文一行英文的 README 约定）
+CAT_EN = {'🚀 智力增强 Booster': 'Intelligence Boosters', '🖥 界面与工作台': 'UI & Workbench',
+          '⌨️ 终端与桌面端': 'Terminal & Desktop', '👁 视觉与多模态': 'Vision & Multimodal',
+          '🤖 Agent 能力与编排': 'Agent Orchestration', '💻 编码与生产力': 'Coding & Productivity',
+          '🧠 记忆与上下文': 'Memory & Context', '📡 消息通讯与 IM': 'Messaging & IM',
+          '🗂 文件、数据与浏览': 'Files, Data & Browsing', '🛒 市场与管理': 'Marketplaces & Management',
+          '🎮 娱乐生活': 'Fun & Life', '⭐ 内测成员作品': 'Insider Members', '🎚 预设与配置套件': 'Presets & Config Kits',
+          '🧩 能力合集': 'Capability Collections', '📀 发行版': 'Distributions', '📑 配方管理器': 'Recipe Managers'}
 VERDICT_MARK = {'ok': '✅', 'pending': '待定', 'incompatible': '需适配', 'untested': '未测', None: '—'}
 # 快照四档 → 榜单判定键（渲染期覆盖 JSON 种子值；快照缺失/未定位时回落种子）
 SNAP_VERDICT = {'✅ 运行级可用': 'ok', '运行级可用': 'ok', '❌ 运行级不兼容': 'incompatible',
@@ -184,11 +192,14 @@ def main():
         '<!-- AUTO:featured:START -->', '',
         f'> 人工策展 {total} 款插件，按 11 类分组、类内按星标排序；星标{REFRESH_LABEL}'
         f'（成员调整请提 PR 修改 data/awesome-50.json）。数据截至 {ts}（UTC+8）。',
+        f'> *Human-curated {total} plugins in 11 groups, star-sorted within each; stars auto-refresh every 6 hours '
+        f'(membership via PR to data/awesome-50.json). As of {ts} (UTC+8).*',
         '',
     ]
     for c in cats:
         ranked = sorted(c['plugins'], key=lambda p: (-stars[p['repo']], p['repo'].lower()))
         parts.append(f"### {c['name']}（{len(ranked)}）")
+        parts.append(f"*{CAT_EN.get(c['name'], '')} ({len(ranked)})*")
         parts.append('')
         # 列表布局（非表格）：GitHub 表格对单元格图片强制 max-width:100%+height:auto 缩放无法规避；
         # 列表行内图片保持原尺寸，磁贴开头统一 108px 亦使全页文本列自然对齐
@@ -198,11 +209,11 @@ def main():
                          f" — {p['desc'].replace('|', '\\|')}")
         parts.append('')
     parts.append('> 兼容状态磁贴 = 雷达 k8s 运行级判定（🟩 已兼容 · 🟨 需适配 · ⬜ 待测试，三态等宽；四档口径见下文），'
-                 '右半为该轮 runner 测试版本（与 [data/radar-env.json](data/radar-env.json) 同源），'
-                 '**本列由 bot 按最新快照自动回写**，榜内成员走插队重测通道优先轮测；'
-                 'rc.8 + v4flash 源码路径重测（2026-08-21，50 仓 + 对方清单高星 22 仓）证据见 '
-                 '[data/rc8-retest-20260821/](data/rc8-retest-20260821/) 与 [PLUGINS-ALL.md](PLUGINS-ALL.md)；'
+                 '右半为该轮 runner 测试版本，**由 bot 按最新快照自动回写**，榜内成员走插队重测通道优先轮测；'
                  '安装第三方插件前请审查源码并固定 commit。')
+    parts.append('> *Status tiles = radar k8s runtime verdicts (🟩 compatible · 🟨 needs-adaptation · ⬜ to-test); '
+                 'the right segment carries the runner version — both auto-updated from the latest snapshot. '
+                 'Always review plugin source and pin a commit before installing.*')
     block = '\n'.join(parts) + '\n\n<!-- AUTO:featured:END -->'
 
     # ── 整合包节（AUTO:bundles）：四形态，类内星标降序 ──
@@ -211,11 +222,14 @@ def main():
         '<!-- AUTO:bundles:START -->', '',
         f'> 人工策展 {btotal} 个整合包：内测成员作品置顶，其下按预设套件 / 能力合集 / 发行版 / 配方管理器四形态分组，'
         f'类内按星标排序；星标{REFRESH_LABEL}（成员调整请提 PR 修改 data/bundles.json）。数据截至 {ts}（UTC+8）。',
+        f'> *Human-curated {btotal} bundles: insider picks pinned on top, then presets / collections / distributions / '
+        f'recipe managers, star-sorted; auto-refreshed every 6 hours. As of {ts} (UTC+8).*',
         '',
     ]
     for f in forms:
         ranked = sorted(f['plugins'], key=lambda p: (-stars[p['repo']], p['repo'].lower()))
         bparts.append(f"### {f['name']}（{len(ranked)}）")
+        bparts.append(f"*{CAT_EN.get(f['name'], '')} ({len(ranked)})*")
         bparts.append('')
         for p in ranked:
             t = tile(rv.get(p['repo'].lower(), p.get('verdict')), ver)
@@ -223,10 +237,12 @@ def main():
                           f" — {p['desc'].replace('|', '\\|')}")
         bparts.append('')
     bparts.append('> 磁贴口径同精选榜（三态 · 右半 runner 版本）；整合包安装方式以各仓库 README 为准（预设类多为 `dsh plugin add` 后在设置中启用，发行版类需按其自身安装器操作）。')
+    bparts.append('> *Tiles follow the same scheme as the featured board; install per each bundle\'s own README '
+                  '(presets: `dsh plugin add` then enable in settings; distributions: use their installers).*')
     bblock = '\n'.join(bparts) + '\n\n<!-- AUTO:bundles:END -->'
 
     changed = False
-    for name in ['README.md', 'README.en-US.md']:
+    for name in ['README.md',]:
         path = os.path.join(ROOT, name)
         text = open(path, encoding='utf-8').read()
         new = re.sub(r'<!-- AUTO:featured:START -->[\s\S]*?<!-- AUTO:featured:END -->',

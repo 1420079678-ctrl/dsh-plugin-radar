@@ -88,12 +88,6 @@
           "name": "dsh-annotation",
           "verdict": "ok",
           "desc": "划选文字→批注→随消息发送，回复逐条对照"
-        },
-        {
-          "repo": "vlln/dsh-navbar",
-          "name": "dsh-navbar",
-          "verdict": "ok",
-          "desc": "对话节点导航条：右缘节点串快速跳转（官方 bundle 插件）"
         }
       ]
     },
