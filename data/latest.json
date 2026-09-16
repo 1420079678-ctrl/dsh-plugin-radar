@@ -1,9 +1,9 @@
 {
  "schema": "dsh-radar/v1",
- "generated_at": "2026-09-16T00:30:48Z",
- "snapshot_run_id": "20260916T003001Z",
+ "generated_at": "2026-09-16T02:05:21Z",
+ "snapshot_run_id": "20260916T014501Z",
  "stats": {
-  "ok": 6113,
+  "ok": 6114,
   "incompatible": 2030,
   "pending": 1202,
   "untested": 125,
@@ -11,7 +11,7 @@
   "ambiguous": 103,
   "unlocated": 8652
  },
- "total_listed": 9456,
+ "total_listed": 9457,
  "data": {
   "plugins_all": "data/plugins-all.json",
   "snapshots_dir": "data/snapshots/"
