@@ -1,6 +1,6 @@
 {
  "schema": "dsh-radar/v1",
- "generated_at": "2026-09-17T21:00:48Z",
+ "generated_at": "2026-09-17T21:15:46Z",
  "plugins": [
   {
    "repo": "tt-a1i/archify",
@@ -911,13 +911,6 @@
    "verdict": "pending",
    "stars": 5,
    "desc": "—"
-  },
-  {
-   "repo": "everclear077/dsh-progressive-tools",
-   "name": "everclear077-dsh-progressive-tools",
-   "verdict": "ok",
-   "stars": 5,
-   "desc": "Progressive tool discovery for DeepSeek Harness — tiny stable surface, searchable catalog, real pipeline execu"
   },
   {
    "repo": "GooodWei/context-vista",
@@ -3064,7 +3057,7 @@
   {
    "repo": "hoyyang/dsh-concise",
    "name": "hoyyang-dsh-concise",
-   "verdict": "ok",
+   "verdict": "pending",
    "stars": 1,
    "desc": "One-click Concise output style for DeepSeek Harness (dsh): per-session toggle + plain-language digest card on"
   },
@@ -4012,6 +4005,13 @@
    "verdict": "ok",
    "stars": 1,
    "desc": "Universal Palette for DeepSeek Harness Web — Commands, Models, Sessions and Conversation Hits with determinist"
+  },
+  {
+   "repo": "yunxiyang/dsh-loop-continue",
+   "name": "yunxiyang-dsh-loop-continue",
+   "verdict": "ok",
+   "stars": 1,
+   "desc": "Continue a DeepSeek Harness agent turn whose model narrated its next action but called no tool."
   },
   {
    "repo": "yuzi-ska/DSH-Chrome-devtools",
@@ -5335,13 +5335,6 @@
    "verdict": "ok",
    "stars": 0,
    "desc": "dsh 收藏夹插件，可以收藏网址和会话，支持快捷键切换会话"
-  },
-  {
-   "repo": "qiqiangvae/dsh-newbe-plugins",
-   "name": "qiqiangvae-dsh-newbe-plugins",
-   "verdict": "ok",
-   "stars": 0,
-   "desc": "个人使用 DSH 的增强插件，包括收藏功能、输入锁和会话工具收纳等功能"
   },
   {
    "repo": "qiuyongjin/dsh-plugin-development",
@@ -7185,6 +7178,13 @@
    "desc": "—"
   },
   {
+   "repo": "everclear077/dsh-progressive-tools",
+   "name": "everclear077-dsh-progressive-tools",
+   "verdict": "incompatible",
+   "stars": 5,
+   "desc": "Progressive tool discovery for DeepSeek Harness — tiny stable surface, searchable catalog, real pipeline execu"
+  },
+  {
    "repo": "megatronyy/dsh-tradingagents",
    "name": "megatronyy-dsh-tradingagents",
    "verdict": "incompatible",
@@ -8732,6 +8732,13 @@
    "desc": "将简短或模糊的指令改写为结构化 Prompt"
   },
   {
+   "repo": "lt9/dsh-simple-auth",
+   "name": "lt9-dsh-simple-auth",
+   "verdict": "incompatible",
+   "stars": 0,
+   "desc": "Ultra-light dsh login gate: shared key or master/guest keys, ACL-filtered session list, owner-only share/unsha"
+  },
+  {
    "repo": "luyy9apples/dsh-workspace-memory",
    "name": "luyy9apples-dsh-workspace-memory",
    "verdict": "incompatible",
@@ -8793,6 +8800,13 @@
    "verdict": "incompatible",
    "stars": 0,
    "desc": "Per-session advisory locks that stop two dsh processes from corrupting one session log"
+  },
+  {
+   "repo": "qiqiangvae/dsh-newbe-plugins",
+   "name": "qiqiangvae-dsh-newbe-plugins",
+   "verdict": "incompatible",
+   "stars": 0,
+   "desc": "个人使用 DSH 的增强插件，包括收藏功能、输入锁和会话工具收纳等功能"
   },
   {
    "repo": "red000000/dsh-cross-session-bridge",
@@ -9038,6 +9052,13 @@
    "verdict": "incompatible",
    "stars": 0,
    "desc": "Caidazi investment MCP and Skills plugin for DeepSeek Harness"
+  },
+  {
+   "repo": "yingjian666/dsh-zh-thinking",
+   "name": "yingjian666-dsh-zh-thinking",
+   "verdict": "incompatible",
+   "stars": 0,
+   "desc": "DeepSeek Harness (dsh) 插件：注入系统提示词，强制 Agent 的思维链 / 规划 / 工具推理全程使用简体中文，防止中文思考漂移为英文"
   },
   {
    "repo": "yummy4727/dsh-context-branch",
@@ -11859,6 +11880,13 @@
    "verdict": "ok",
    "stars": 3,
    "desc": "A growing, auditable design-review palate for DSH: 13 local tools, visual training, and opt-in Apple/X referen"
+  },
+  {
+   "repo": "gwsbhqt/dsh-insight",
+   "name": "gwsbhqt-dsh-insight",
+   "verdict": "pending",
+   "stars": 3,
+   "desc": "洞察 — read-only insight panel for a DeepSeek Harness profile: where every plugin, service, tool and model came"
   },
   {
    "repo": "havingautism/dsh-ultra-ui",
@@ -17160,6 +17188,13 @@
    "desc": "DSH web plugin: open and edit .docx in the better-sidebar via SuperDoc — self-hosted, offline-capable, atomic"
   },
   {
+   "repo": "chendefine/dsh-sidebar-vscode",
+   "name": "chendefine-dsh-sidebar-vscode",
+   "verdict": "pending",
+   "stars": 0,
+   "desc": "DSH plugin: a better-sidebar tab embedding the VS Code web workbench at the session workspace; editor selectio"
+  },
+  {
    "repo": "chengoak/dsh-font-size",
    "name": "chengoak-dsh-font-size",
    "verdict": "ok",
@@ -19673,13 +19708,6 @@
    "desc": "Floating GPU monitor (nvidia-smi) for the DSH Web UI — live per-GPU utilization, VRAM, temperature, power and"
   },
   {
-   "repo": "zhuifengqug/dsh-quick-restart",
-   "name": "zhuifengqug-dsh-quick-restart",
-   "verdict": "ok",
-   "stars": 0,
-   "desc": "为 DeepSeek Harness 提供快速重启命令的插件"
-  },
-  {
    "repo": "zhuoxuanliu53-svg/dsh-updater",
    "name": "zhuoxuanliu53-svg-dsh-updater",
    "verdict": "ok",
@@ -20847,13 +20875,6 @@
    "verdict": "incompatible",
    "stars": 3,
    "desc": "Agent trajectory governance & anomaly diagnosis plugin for DeepSeek Harness (dsh): multi-branch trajectory tre"
-  },
-  {
-   "repo": "gwsbhqt/dsh-insight",
-   "name": "gwsbhqt-dsh-insight",
-   "verdict": "incompatible",
-   "stars": 3,
-   "desc": "洞察 — read-only insight panel for a DeepSeek Harness profile: where every plugin, service, tool and model came"
   },
   {
    "repo": "hanjixin/dsh-finance-plugins",
@@ -22585,13 +22606,6 @@
    "desc": "DeepSeek Harness 文件同步插件：交付文件自动上传 OpenList + 目录全读写工具 + 设置面板 + 按工作区布局"
   },
   {
-   "repo": "chendefine/dsh-sidebar-vscode",
-   "name": "chendefine-dsh-sidebar-vscode",
-   "verdict": "incompatible",
-   "stars": 0,
-   "desc": "DSH plugin: a better-sidebar tab embedding the VS Code web workbench at the session workspace; editor selectio"
-  },
-  {
    "repo": "cherrchen/dsh-client-ui-details-host",
    "name": "cherrchen-dsh-client-ui-details-host",
    "verdict": "incompatible",
@@ -22744,6 +22758,13 @@
    "verdict": "incompatible",
    "stars": 0,
    "desc": "独立实时前端面板：宿主托管自包含 HTML + HTTP API，零官方 client 依赖"
+  },
+  {
+   "repo": "jonah791/dsh-video-studio",
+   "name": "jonah791-dsh-video-studio",
+   "verdict": "incompatible",
+   "stars": 0,
+   "desc": "DSH 视频工作台插件：把视频工厂（TTS/配乐/混音/Remotion 渲染/多级质检/主题脚手架）封装为工具面，支撑创作任意视频"
   },
   {
    "repo": "joyboy-yy/dsh-plugin-sound-notify",
@@ -23248,6 +23269,13 @@
    "verdict": "incompatible",
    "stars": 0,
    "desc": "Automatically resumes replies cut off at the output token limit — built for self-hosted Ollama users with smal"
+  },
+  {
+   "repo": "zhuifengqug/dsh-quick-restart",
+   "name": "zhuifengqug-dsh-quick-restart",
+   "verdict": "incompatible",
+   "stars": 0,
+   "desc": "为 DeepSeek Harness 提供快速重启命令的插件"
   },
   {
    "repo": "zmm863-commits/dsh-paopaocat-suite",
@@ -31615,13 +31643,6 @@
    "desc": "—"
   },
   {
-   "repo": "jcleener/dsh-model-cascade",
-   "name": "jcleener-dsh-model-cascade",
-   "verdict": "ok",
-   "stars": 0,
-   "desc": "DSH 插件：模型选择三级级联菜单（供应商→系列→完整模型名）"
-  },
-  {
    "repo": "jedzqer/dsh-sound-plugin",
    "name": "jedzqer-dsh-sound-plugin",
    "verdict": "ok",
@@ -39511,6 +39532,13 @@
    "desc": "DSH 一键重启：装完插件说一句 reload 就自动重启生效，不用手动 Ctrl+C 🔄"
   },
   {
+   "repo": "little-traincar/dsh-imagegen",
+   "name": "little-traincar-dsh-imagegen",
+   "verdict": "incompatible",
+   "stars": 1,
+   "desc": "Image generation plugin for DeepSeek Harness — Doubao Seedream 5.0 Pro / qwen-image-3.0-pro, watermark-free, v"
+  },
+  {
    "repo": "llluchy/dsh-hive",
    "name": "llluchy-dsh-hive",
    "verdict": "incompatible",
@@ -40328,6 +40356,13 @@
    "verdict": "incompatible",
    "stars": 0,
    "desc": "DSH plugin: voice notes in, spoken answers out"
+  },
+  {
+   "repo": "jcleener/dsh-model-cascade",
+   "name": "jcleener-dsh-model-cascade",
+   "verdict": "incompatible",
+   "stars": 0,
+   "desc": "DSH 插件：模型选择三级级联菜单（供应商→系列→完整模型名）"
   },
   {
    "repo": "jianzhexu/dsh-token-billing",
@@ -42078,13 +42113,6 @@
    "verdict": "ok",
    "stars": 3,
    "desc": "deepseek的harness桌面端"
-  },
-  {
-   "repo": "tiphareth0/dsh-hardssh",
-   "name": "tiphareth0-dsh-hardssh",
-   "verdict": "ok",
-   "stars": 3,
-   "desc": "Run your work with existing DSH plugins on remote servers, across any number of machines"
   },
   {
    "repo": "tttwh/dsh-plugin-diraud",
@@ -45375,6 +45403,13 @@
    "verdict": "incompatible",
    "stars": 3,
    "desc": "microsandbox支持"
+  },
+  {
+   "repo": "tiphareth0/dsh-hardssh",
+   "name": "tiphareth0-dsh-hardssh",
+   "verdict": "incompatible",
+   "stars": 3,
+   "desc": "Run your work with existing DSH plugins on remote servers, across any number of machines"
   },
   {
    "repo": "ucas-liumk/deepseek-harness-desktop",
@@ -53042,13 +53077,6 @@
    "desc": "Execution-time drift firewall for long-running DeepSeek Harness agents"
   },
   {
-   "repo": "173787247/dsh-wsl-open",
-   "name": "173787247-dsh-wsl-open",
-   "verdict": "ok",
-   "stars": 3,
-   "desc": "DeepSeek Harness plugin: open WSL Linux paths from chat in Windows."
-  },
-  {
    "repo": "br1nosense/dsh-wxauto-plugin",
    "name": "br1nosense-dsh-wxauto-plugin",
    "verdict": "ok",
@@ -54986,6 +55014,13 @@
    "verdict": "incompatible",
    "stars": 4,
    "desc": "通过 Telegram 私聊远程使用和查看 DeepSeek Harness"
+  },
+  {
+   "repo": "173787247/dsh-wsl-open",
+   "name": "173787247-dsh-wsl-open",
+   "verdict": "incompatible",
+   "stars": 3,
+   "desc": "DeepSeek Harness plugin: open WSL Linux paths from chat in Windows."
   },
   {
    "repo": "21hbguo/dsh-feishu-bridge-plugin",
@@ -59354,13 +59389,6 @@
    "verdict": "ok",
    "stars": 1,
    "desc": "Per-provider concurrency gate for DeepSeek Harness model requests"
-  },
-  {
-   "repo": "daveycodez/dsh-llm-agent-bridge",
-   "name": "daveycodez-dsh-llm-agent-bridge",
-   "verdict": "ok",
-   "stars": 1,
-   "desc": "Claude as a selectable LLM provider in DeepSeek Harness, via Anthropic's official Claude Agent SDK"
   },
   {
    "repo": "ddtcorex/dsh-maestro-memory",
@@ -64786,6 +64814,13 @@
    "verdict": "incompatible",
    "stars": 1,
    "desc": "Deterministic fault injection and autonomous resilience tests for DeepSeek Harness tools"
+  },
+  {
+   "repo": "daveycodez/dsh-llm-agent-bridge",
+   "name": "daveycodez-dsh-llm-agent-bridge",
+   "verdict": "incompatible",
+   "stars": 1,
+   "desc": "Claude as a selectable LLM provider in DeepSeek Harness, via Anthropic's official Claude Agent SDK"
   },
   {
    "repo": "dd2673/dsh-wending-git-workbench",
