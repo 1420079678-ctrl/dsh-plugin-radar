@@ -1,4 +1,4 @@
-# 🤖 Agent 能力（2351）
+# 🤖 Agent 能力（2352）
 
 > 数据源与口径见 [PLUGINS-ALL.md](../../PLUGINS-ALL.md)（索引页）；磁贴图例同 README。
 
@@ -314,6 +314,7 @@
 - 🟩 `[可用]` [dsh-product-delivery-workflow](https://github.com/wellorbetter/dsh-product-delivery-workflow) ★2 — 100% AI-native product delivery workflow plugin for DeepSeek Harness: full product-to-release pipeline (resear
 - ⬜ `[待定]` [whaojie797-design-novera-ai-skills](https://github.com/whaojie797-design/Novera-AI-skills) ★2 — —
 - 🟩 `[可用]` [wicm84266964-dsh-minimal-mode-compaction](https://github.com/wicm84266964/dsh-minimal-mode-compaction) ★2 — 为 DeepSeek Harness 极简模式增加自动上下文压缩、/compact、/context 和模型主动压缩，解决极简模式长任务无法持续工作的问题
+- ⬜ `[待定]` [winston-hoo-dsh-spec-forge](https://github.com/winston-hoo/dsh-spec-forge) ★2 — 一个 DeepSeek Harness（dsh）插件，把模糊的编程需求锻造成可执行规格，并在每次任务完成后沉淀为会自动复用的个人提示词模板库
 - 🟩 `[可用]` [winterhuan-dsh-skills-viewer](https://github.com/winterhuan/dsh-skills-viewer) ★2 — Read-only Skills settings page plugin for DeepSeek Harness Web
 - 🟩 `[可用]` [wmengxiang-dsh-prompt-optimizer](https://github.com/wmengxiang/dsh-prompt-optimizer) ★2 — —
 - 🟩 `[可用]` [woosh2010-dsh-usage-dashboard](https://github.com/woosh2010/dsh-usage-dashboard) ★2 — DeepSeek Harness (dsh) usage analytics plugin: peak/valley billing dock, token/cost/model dashboard, cross-ses
@@ -724,11 +725,13 @@
 - `[未定位]` **hanihahaha-dsh-auto-approve** — 占位待复核，判定暂不展示
 - `[未定位]` **hanihahaha-dsh-copy-session-id** — 占位待复核，判定暂不展示
 - `[未定位]` **hanihahaha-dsh-skill-mcp-manager** — 占位待复核，判定暂不展示
+- ⬜ `[待定]` [hansjone-netxops](https://github.com/hansjone/netxops) ★0 — DeepSeek Harness Netx Ops agent preset (UME alarms, NE, managed CLI)
 - 🟩 `[可用]` [haoku123-dsh-budget-guard](https://github.com/haoku123/dsh-budget-guard) ★0 — DeepSeek Harness plugin: LLM cost metering with budget enforcement (deny/warn) and peak-valley pricing
 - 🟩 `[可用]` [haozheou-dsh-exam-expert](https://github.com/haozheou/dsh-exam-expert) ★0 — 出题专家 · Exam Expert plugin for DeepSeek Harness: 把出题流程固化成值守流水线（角色+目录→通读→勾选表单→六分身流水线→看板交付） \| Turn the exam-paper
 - 🟩 `[可用]` [harness-home-harness-ai-app](https://github.com/harness-home/harness-ai-app) ★0 — Mobile client for Harness AI — follow, answer and approve your hosted agent sessions from your phone
 - 🟩 `[可用]` [harness-home-harness-ai-desktop](https://github.com/harness-home/harness-ai-desktop) ★0 — Desktop client for Harness AI — an Electron app that boots the DeepSeek Harness (dsh) agent runtime in-process
 - `[未定位]` **harzva-dsh-session-context-menu** — 占位待复核，判定暂不展示
+- ⬜ `[待定]` [hawk2048-oh-my-dsh](https://github.com/hawk2048/oh-my-dsh) ★0 — oh-my-dsh: OMC-style multi-agent orchestration for DeepSeek Harness — 29 workflow skills + 12 /omd-* slash com
 - `[未定位]` **heeweelee-dsh-session-plugin** — 占位待复核，判定暂不展示
 - `[未定位]` **hiccupgeng-dsh-briefing-skill** — 占位待复核，判定暂不展示
 - `[未定位]` **high-cla-multi-skilled-repository** — 占位待复核，判定暂不展示
@@ -774,6 +777,7 @@
 - 🟩 `[可用]` [jonah791-dsh-agent-context-steward](https://github.com/jonah791/dsh-agent-context-steward) ★0 — 上下文管家（借鉴 ThoughtDAG「用户是你」）：context_health 工具给当前会话上下文体检（压力/构成/健康 + 主动管理建议），增强我作为上下文主编的可见性与管理能力
 - 🟩 `[可用]` [jonah791-dsh-agent-emotion](https://github.com/jonah791/dsh-agent-emotion) ★0 — 情感与人格插件：6 维进化棱镜的运行时传感器——感知层（订阅 DSH 工具管线/思考流事件采集 6 侧面信号）→ 情感引擎（增速差值=情感信号）→ 人格层（权重漂移）→ 呈现层（emotion_status）
 - 🟩 `[可用]` [jonah791-dsh-agent-reflection](https://github.com/jonah791/dsh-agent-reflection) ★0 — 每日反思插件：固定时间（默认凌晨 12 点）向爱丽丝发反思提醒，结合当天记忆按 6 维进化棱镜自审
+- ⬜ `[待定]` [jonah791-dsh-agent-self-test](https://github.com/jonah791/dsh-agent-self-test) ★0 — 自我检验闭环插件：把「猜想→检验→学习」自指引擎做成运行时机制——可证伪自我假设库 + 工具管线自动采证（4 探针含 5.9 probe-before-action 行动前探测传感器）+ finding 浮现裁决，实现惊
 - `[未定位]` **jonah791-dsh-agent-teams** — 占位待复核，判定暂不展示
 - 🟩 `[可用]` [jonah791-dsh-agent-thinking](https://github.com/jonah791/dsh-agent-thinking) ★0 — 思维插件（提示词层面 MoE）：14 个思维模块按需动态加载注入 system prompt，任务相关时激活对应思维方式（感知/推演/执行/交付/反馈五层认知流）
 - 🟩 `[可用]` [jonah791-dsh-agent-vision](https://github.com/jonah791/dsh-agent-vision) ★0 — 多模态视觉插件（辅助通道）：把本地图片喂给 OpenAI 兼容 VLM（默认 qwen3.8-flash）做读图/描述/双图对比——批量审图/省主会话上下文；主会话亲眼看图走官方 read_image（原生多模态）
@@ -1837,7 +1841,6 @@
 - 🟨 `[不兼容]` [dsh-capability-inspector](https://github.com/tree201/dsh-capability-inspector) ★2 — DeepSeek Harness Doctor and DSH runtime diagnostics for tools, models, skills, workspaces, sessions, plugins,
 - 🟨 `[不兼容]` [v-quest123456-dsh-smart-input](https://github.com/v-quest123456/dsh-smart-input) ★2 — 智能输入插件 for DeepSeek Harness — 语音输入 + 提示词优化
 - 🟨 `[不兼容]` [weiwang988-dsh-session-spend](https://github.com/weiwang988/dsh-session-spend) ★2 — DSH 客户端插件：实时会话花费（¥）· 官方峰谷计价 + 节省分解 DSH client plugin: live session cost readout (¥) with official DeepSeek pea
-- 🟨 `[不兼容]` [winston-hoo-dsh-spec-forge](https://github.com/winston-hoo/dsh-spec-forge) ★2 — 一个 DeepSeek Harness（dsh）插件，把模糊的编程需求锻造成可执行规格，并在每次任务完成后沉淀为会自动复用的个人提示词模板库
 - 🟨 `[不兼容]` [dsh-usage-widget](https://github.com/xinmo114514/dsh-usage-widget) ★2 — DSH (DeepSeek Harness) 持久化 Web 插件：Token 用量统计悬浮窗 —— 可拖动窗口/圆点、曲线/热力图、总 tokens 大数字；宿主半聚合会话日志并提供 /usage/api/snapsh
 - 🟨 `[不兼容]` [dsh-plugin-meta-memory](https://github.com/YYTbit/dsh-plugin-meta-memory) ★2 — Structured long-term memory system for DeepSeek Harness
 - 🟨 `[不兼容]` [dsh-SkillsManagePlugins](https://github.com/z-col/dsh-SkillsManagePlugins) ★2 — DSH Skills 可视化管理器：在 DSH Web 界面可视化查看、编辑、创建、删除 Skills（用户级 ~/.dsh/skills 与项目级 .dsh/skills）
@@ -2003,7 +2006,6 @@
 - `[未定位]` **guanzhw-agentsession** — 占位待复核，判定暂不展示
 - `[未定位]` **hakunm-dsh-approve-for-me** — 占位待复核，判定暂不展示
 - `[未定位]` **hannelee-dsh-agent-state** — 占位待复核，判定暂不展示
-- 🟨 `[不兼容]` [hansjone-netxops](https://github.com/hansjone/netxops) ★0 — DeepSeek Harness Netx Ops agent preset (UME alarms, NE, managed CLI)
 - `[未定位]` **haohaihuang-design-agent** — 占位待复核，判定暂不展示
 - 🟨 `[不兼容]` [harp-reed-planbridge](https://github.com/harp-reed/planbridge) ★0 — —
 - `[未定位]` **harzva-dsh-agent-project-sync** — 占位待复核，判定暂不展示
@@ -2037,7 +2039,6 @@
 - `[未定位]` **jokasa7-dsh-product-subagent-console** — 占位待复核，判定暂不展示
 - 🟨 `[不兼容]` [jonah791-dsh-agent-guardian](https://github.com/jonah791/dsh-agent-guardian) ★0 — 守卫插件（从 dsh-agent-watch 拆分）：web 保活——启动时端口空闲拉起 web、崩溃自愈（快速退出计数+落盘事故）、收养外部 dsh web（零互踢）
 - 🟨 `[不兼容]` [jonah791-dsh-agent-runtime](https://github.com/jonah791/dsh-agent-runtime) ★0 — 守护运行时服务：runtime 环境发现（bin/port/profile 单一来源）+ webman 进程管理（spawn/kill/portOwner），消除 sentinel/guardian 重复
-- 🟨 `[不兼容]` [jonah791-dsh-agent-self-test](https://github.com/jonah791/dsh-agent-self-test) ★0 — 自我检验闭环插件：把「猜想→检验→学习」自指引擎做成运行时机制——可证伪自我假设库 + 工具管线自动采证（4 探针含 5.9 probe-before-action 行动前探测传感器）+ finding 浮现裁决，实现惊
 - `[未定位]` **junguangjiang-dsh-agent-lead** — 占位待复核，判定暂不展示
 - 🟨 `[不兼容]` [jypjypjypjyp-dsh-agent-teams](https://github.com/jypjypjypjyp/dsh-agent-teams) ★0 — AgentTeams plugin for DeepSeek Harness
 - `[未定位]` **kaka-in-home-dsh-agent-teams-meta** — 占位待复核，判定暂不展示
