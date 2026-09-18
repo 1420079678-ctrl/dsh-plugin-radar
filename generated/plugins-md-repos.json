@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-18T05:01:10+00:00",
+  "generated_at": "2026-09-18T05:01:42+00:00",
   "source": "PLUGINS.md",
-  "count": 292,
+  "count": 293,
   "repos": [
     "1na-ko/dsh-hdc-bridge",
     "263311487-ux/dsh-verify",
@@ -153,6 +153,7 @@
     "Y1X1n/dsh-prompt-optimizer",
     "YEYEYEYESHIFU/dsh-result-only-view",
     "YEYEYEYESHIFU/dsh-session-hotkeys",
+    "YEYEYEYESHIFU/dsh-split-screen",
     "YRN-playmaker/dsh-wallpaper_share",
     "ZSeven-W/openpencil",
     "Zn-Dk/dsh-session-explorer",
