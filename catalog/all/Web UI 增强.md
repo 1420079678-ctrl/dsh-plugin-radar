@@ -363,6 +363,7 @@
 - 🟩 `[可用]` [huabai-flowerwhite-dsh-plugin-manager](https://github.com/huabai-flowerwhite/dsh-plugin-manager) ★3 — 面向 DeepSeek Harness（dsh）的**第三方插件管理器**：在 Web UI 设置页选择第三方插件库文件夹，搜索其中所有第三方插件，并一键关闭/启动（刷新 dsh 后生效）
 - 🟩 `[可用]` [huadong19970512-cyber-deepseek-tui](https://github.com/huadong19970512-cyber/deepseek-tui) ★3 — Unofficial Tauri desktop shell for DeepSeek Harness
 - 🟩 `[可用]` [huanxi-drxx-dsh-client-ui-mobile](https://github.com/huanxi-drxx/dsh-client-ui-mobile) ★3 — DSH Web UI 手机端适配插件：抽屉式布局、聊天背景+毛玻璃、AI 聊天气泡、消息头像、中英双语（桌面端与原版一致）
+- ⬜ `[待定]` [huashenglian-dsh-omni-workstation](https://github.com/huashenglian/dsh-omni-workstation) ★3 — dsh全模态工作站插件，让模型支持视频、图片、语音的输入与输出，支持comfyui图像生成工具调用
 - 🟩 `[可用]` [huguangyu666-dsh-plugin-backdrop](https://github.com/huguangyu666/dsh-plugin-backdrop) ★3 — dsh Web UI 动态背景：WebGL2 流体 + 字符鲸鱼游动(循环接缝赛博朋克故障转场) + 发光鱼群 + 点线网格
 - 🟩 `[可用]` [invalidnaaaame-dsh-scroll-timeline](https://github.com/invalidnaaaame/dsh-scroll-timeline) ★3 — DSH web plugin: ChatGPT-style scroll timeline on the chat sidebar — magnetic mountain hover, click to jump to
 - 🟩 `[可用]` [jean3690-dsh-devtoolbox](https://github.com/jean3690/dsh-devtoolbox) ★3 — DSH 本地工具箱插件：侧边栏独立页面 + /toolbox 命令 + 配置驱动的 agent 工具注册，35 个纯本地小工具（文本/编码/数据/安全/提取/转换/参考/效率），数据不出本机
@@ -839,7 +840,7 @@
 - 🟩 `[可用]` [llyyhh0487-desk-harness](https://github.com/llyyhh0487/desk-harness) ★1 — DESK HARNESS — DeepSeek Harness 的 Windows 桌面壳：自动部署并拉起本地 dsh 服务，托盘驻留、终端停靠面板、dsh-plugin 插件商店，开箱即用
 - 🟩 `[可用]` [dsh-theme-ti](https://github.com/longyu065/dsh-theme-ti) ★1 — —
 - 🟩 `[可用]` [lovejavacore-dsh-minecraft-pet](https://github.com/lovejavacore/dsh-minecraft-pet) ★1 — DeepSeek Harness（DSH）网页界面的桌面宠物——Steve、Creeper 和 Ultraman 会根据代理的工作状态做出反应
-- 🟩 `[可用]` [loyalchiiina-dsh-todo-float-ball](https://github.com/loyalchiiina/dsh-todo-float-ball) ★1 — Floating todo progress ball for DSH: live done/total + active task, status colours, draggable, Shadow-DOM isol
+- ⬜ `[待定]` [loyalchiiina-dsh-todo-float-ball](https://github.com/loyalchiiina/dsh-todo-float-ball) ★1 — Floating todo progress ball for DSH: live done/total + active task, status colours, draggable, Shadow-DOM isol
 - 🟩 `[可用]` [lsxblh-dsh-todo-dock](https://github.com/lsxblh/dsh-todo-dock) ★1 — DeepSeek Harness Web GUI 插件：把 todo 面板停靠到右上角并跨轮常驻（CSS 注入 + 机制级重放），可热调样式，零依赖
 - 🟩 `[可用]` [ltsone9-dsh-filemenu](https://github.com/ltsone9/dsh-filemenu) ★1 — Right-click file menu for DeepSeek Harness (DSH) web UI: open, reveal in Explorer, open with editor, copy path
 - 🟩 `[可用]` [lumi-lei-interchange-plugin](https://github.com/lumi-lei/interchange-plugin) ★1 — Local-first role-based collaboration tools for DeepSeek Harness, with an embedded panel and human-confirmed de
@@ -1427,7 +1428,7 @@
 - `[未定位]` **louiscanbe-dsh-plugin-ollama-monitor** — 占位待复核，判定暂不展示
 - `[未定位]` **louishaol-cloudcli-timer-agent** — 占位待复核，判定暂不展示
 - ⬜ `[待定]` [louishzwang-dsh-web-launcher](https://github.com/louishzwang/dsh-web-launcher) ★0 — DSH Web本地终端启动脚本
-- 🟩 `[可用]` [lovezi0-dsh-visualizer-widget](https://github.com/lovezi0/dsh-visualizer-widget) ★0 — DeepSeek Harness 的会话流「内联可视化」插件：模型产出 SVG / HTML 源码后，交给浏览器渲染成一张可交互的内联卡片，源码只进卡片、不回灌模型上下文
+- ⬜ `[待定]` [lovezi0-dsh-visualizer-widget](https://github.com/lovezi0/dsh-visualizer-widget) ★0 — DeepSeek Harness 的会话流「内联可视化」插件：模型产出 SVG / HTML 源码后，交给浏览器渲染成一张可交互的内联卡片，源码只进卡片、不回灌模型上下文
 - 🟩 `[可用]` [loyalchiiina-dsh-skill-browser](https://github.com/loyalchiiina/dsh-skill-browser) ★0 — DSH skill library browser: floating ball, two-level categories, Chinese descriptions, realtime search, full-te
 - `[未定位]` **lucasleecn-dsh-client-ui-pet** — 占位待复核，判定暂不展示
 - `[未定位]` **lucienll-dsh-peak-price-panel** — 占位待复核，判定暂不展示
@@ -2276,7 +2277,6 @@
 - 🟨 `[不兼容]` [dsh-narrative-ledger](https://github.com/dongsheng123132/dsh-narrative-ledger) ★3 — Verifiable narrative state, continuity and character-knowledge ledger for DeepSeek Harness
 - 🟨 `[不兼容]` [hanjixin-dsh-finance-plugins](https://github.com/hanjixin/dsh-finance-plugins) ★3 — DSH Finance Plugin Suite - 金融场景插件套件
 - 🟨 `[不兼容]` [heekei-dsh-usage](https://github.com/heekei/dsh-usage) ★3 — DSH 供应商用量查询插件 — 实时查询 Kimi/智谱/DeepSeek/火山方舟等套餐与余额, 在输入框下方显示用量读数条
-- 🟨 `[不兼容]` [huashenglian-dsh-omni-workstation](https://github.com/huashenglian/dsh-omni-workstation) ★3 — dsh全模态工作站插件，让模型支持视频、图片、语音的输入与输出，支持comfyui图像生成工具调用
 - 🟨 `[不兼容]` [kusesad-1122-dsh-context-compactor](https://github.com/kusesad-1122/dsh-context-compactor) ★3 — DSH 上下文压缩/总结插件：80% 自动全局详细总结压缩（保留核心任务/决策/待解决问题/重要文件位置，删除调试细节与已解决错误），压缩后验保证 totalTokens 必须真实下降，context-overflow
 - 🟨 `[不兼容]` [liangyou09-lyshell](https://github.com/liangyou09/lyshell) ★3 — AI-native terminal & SSH client built for vibe coding
 - 🟨 `[不兼容]` [linhx1999-dsh-writing-pad](https://github.com/linhx1999/dsh-writing-pad) ★3 — Markdown writing pad for the DeepSeek Harness web GUI: per-session editing, preview, and in-session AI-assiste
