@@ -19,9 +19,16 @@
 
 
 
-[![运行级可用](https://img.shields.io/badge/运行级可用_8551-0.1.5--rc.2-brightgreen)](#2-看懂状态统一四档口径) [![待测](https://img.shields.io/badge/待测_1633-0.1.5--rc.2-lightgrey)](#2-看懂状态统一四档口径) [![需适配](https://img.shields.io/badge/需适配_3474-0.1.5--rc.2-yellow)](#2-看懂状态统一四档口径)
+**判定按 runner 版本分离 / verdicts by runner version：**
 
-[![runtime OK](https://img.shields.io/badge/runtime_OK_8551-0.1.5--rc.2-brightgreen)](#2-看懂状态统一四档口径) [![to test](https://img.shields.io/badge/to_test_1633-0.1.5--rc.2-lightgrey)](#2-看懂状态统一四档口径) [![needs adapt](https://img.shields.io/badge/needs_adapt_3474-0.1.5--rc.2-yellow)](#2-看懂状态统一四档口径)
+| runner 版本 / version | 可用 / OK | 需适配 / adapt | 在测 / testing | 小计 / total |
+|---|---:|---:|---:|---:|
+| **0.1.5-rc.2**（最新 / latest） | 0 | 0 | 258 | 258 |
+| 0.1.5-rc.1 | 1380 | 1365 | 481 | 3226 |
+| 0.1.2-rc.1 | 4458 | 1426 | 174 | 6058 |
+| 0.1.1-rc.2 | 2691 | 647 | 642 | 3980 |
+| latest | 0 | 0 | 1 | 1 |
+| **累计 / cumulative** | **8551** | **3474** | **1633** | **13658** |
 
 ---
 
@@ -413,6 +420,8 @@ docs/radar/        管线文档 / pipeline docs
 <!-- AUTO:ecosystem:START -->
 > 渲染于快照 20260918T214501Z（2026-09-19 05:45 UTC+8）· 数据源 data/snapshots/（渲染即对齐）
 > 按版本分解 / by runner version：0.1.5-rc.2 (258) · 0.1.5-rc.1 (3226) · 0.1.2-rc.1 (6058) · 0.1.1-rc.2 (3980) · latest (1)
+
+
 
 > *Rendered from snapshot — data/snapshots/ (render-time aligned)*
 

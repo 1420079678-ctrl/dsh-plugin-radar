@@ -155,15 +155,31 @@ def main():
             msg = f"{label}_{count}-{ver_str}" if ver_str else f"{label}-{count}"
             return f"https://img.shields.io/badge/{msg}-{color}"
 
-        # 双语两行各自原位刷新（幂等：中文行与英文行在双语 README 中各存一条，各由各正则维护）
-        tiles_zh = (f"[![运行级可用]({_badge('运行级可用', n_ok, 'brightgreen', ver)})](#2-看懂状态统一四档口径) "
-                    f"[![待测]({_badge('待测', n_test, 'lightgrey', ver)})](#2-看懂状态统一四档口径) "
-                    f"[![需适配]({_badge('需适配', n_bad, 'yellow', ver)})](#2-看懂状态统一四档口径)")
-        tiles_en = (f"[![runtime OK]({_badge('runtime_OK', n_ok, 'brightgreen', ver)})](#2-看懂状态统一四档口径) "
-                    f"[![to test]({_badge('to_test', n_test, 'lightgrey', ver)})](#2-看懂状态统一四档口径) "
-                    f"[![needs adapt]({_badge('needs_adapt', n_bad, 'yellow', ver)})](#2-看懂状态统一四档口径)")
-        t_readme = re.sub(r"^\[!\[运行级可用\][^\n]*$", lambda _: tiles_zh, t_readme, count=1, flags=re.M)
-        t_readme = re.sub(r"^\[!\[runtime OK\][^\n]*$", lambda _: tiles_en, t_readme, count=1, flags=re.M)
+        # 按版本分离的判定表（替代混合磁贴——用户需求：多主线版本各自独立呈现）
+        #     数据源 runner-versions.json（逐条 runner_image_digest 聚合），每版本独立计数
+        try:
+            _rvd2 = _j.loads((ROOT / "data" / "runner-versions.json").read_text()) if '_j' in dir() else {}
+        except Exception:
+            _rvd2 = {}
+        _lt2 = _rvd2.get("latest") or ""
+        def _vk2(t):
+            m2 = re.match(r"(\d+)\.(\d+)\.(\d+)-rc\.(\d+)$", t)
+            return (int(m2.group(1)), int(m2.group(2)), int(m2.group(3)), int(m2.group(4))) if m2 else (0, 0, 0, 0)
+        _vs2 = sorted(_rvd2.get("versions", {}).items(), key=lambda kv: (kv[0] == _lt2, _vk2(kv[0])), reverse=True)
+        _vrows = []
+        for _t2, _c2 in _vs2:
+            if sum(_c2.values()) < 5:
+                continue  # 孤儿版本（<5 条）过滤——如 digest 标签为 latest 的历史残留
+            _ok2 = _c2.get("ok", 0); _bad2 = _c2.get("fail", 0); _inc2 = _c2.get("inc", 0) + _c2.get("untested", 0)
+            _tag2 = f"**{_t2}**（最新 / latest）" if _t2 == _lt2 else _t2
+            _vrows.append(f"| {_tag2} | {_ok2} | {_bad2} | {_inc2} | {_ok2 + _bad2 + _inc2} |")
+        _vtable = ("**判定按 runner 版本分离 / verdicts by runner version：**\n\n"
+                   "| runner 版本 / version | 可用 / OK | 需适配 / adapt | 在测 / testing | 小计 / total |\n"
+                   "|---|---:|---:|---:|---:|\n" + "\n".join(_vrows) + "\n"
+                   f"| **累计 / cumulative** | **{n_ok}** | **{n_bad}** | **{n_test}** | **{n_ok + n_bad + n_test}** |")
+        # 替换旧磁贴行为版本表（匹配首屏磁贴行 + 其后的空行/英文磁贴行一并清理）
+        t_readme = re.sub(r"^\[!\[运行级可用\][^\n]*\n(?:^$\n)?(?:^\[!\[runtime OK\][^\n]*\n)?(?:^$\n)?",
+                          _vtable + "\n\n", t_readme, count=1, flags=re.M)
         t_readme = re.sub(r"(（当前 `)[0-9A-Za-z]+(`)", rf"\g<1>{snap['run_id']}\g<2>", t_readme, count=1)
         t_readme = re.sub(r"(currently `)[0-9A-Za-z]+(`)", rf"\g<1>{snap['run_id']}\g<2>", t_readme, count=1)
 
