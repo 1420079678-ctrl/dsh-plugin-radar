@@ -73,12 +73,18 @@ def main() -> int:
     _keys = [p['repo'].lower() for p in plugins]
     assert len(_keys) == len(set(_keys)), f'导出仓库键不唯一: {len(_keys)} 行 {len(set(_keys))}'
 
+    try:
+        _rv = json.loads((root / 'data' / 'runner-versions.json').read_text(encoding='utf8'))
+        runner_versions = _rv
+    except Exception:
+        runner_versions = {}
     latest = {
         'schema': SCHEMA,
         'generated_at': generated_at,
         'snapshot_run_id': anchor.group(1) if anchor else None,
         'stats': stats,
         'total_listed': len(plugins),
+        'runner_versions': runner_versions,
         'data': {
             'plugins_all': 'data/plugins-all.json',
             'snapshots_dir': 'data/snapshots/',

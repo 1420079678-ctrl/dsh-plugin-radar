@@ -312,8 +312,18 @@ def main():
     L.append('')
     L.append('**判定维度**（运行级四档；测试：dsh 容器 agent + Qwen3.6-35B · k8s 5 分片 · run_id 锚定轮次）：')
     L.append('')
-    if radar_ver:
-        L.append(f'- 测试版本：`{radar_ver}`（runner 镜像 cur_image，烤入本页磁贴右段）')
+    try:
+        _rv = json.loads((ROOT / 'data' / 'runner-versions.json').read_text())
+        import re as _re
+        def _vk(t):
+            m = _re.match(r"(\d+)\.(\d+)\.(\d+)-rc\.(\d+)$", t)
+            return (int(m.group(1)), int(m.group(2)), int(m.group(3)), int(m.group(4))) if m else (0, 0, 0, 0)
+        _lt = _rv.get('latest') or ''
+        _vd = ' · '.join(f"{t}（{sum(c.values())}）" for t, c in
+                         sorted(_rv.get('versions', {}).items(), key=lambda kv: (kv[0] == _lt, _vk(kv[0])), reverse=True))
+    except Exception:
+        _vd = radar_ver
+    L.append(f"- 测试版本（多主线累计）：{_vd}；最新 `{_rv.get('latest', radar_ver) if '_rv' in dir() else radar_ver}`（烤入磁贴右段）")
     L.append(f'- 全量判定 {sum(v_all.values())}（全体条目，含监测/未定位；README 磁贴为单快照即时口径，与本清单并集归并口径的差源见附录）：'
              f'`[可用]`（{v_all.get("✅ 运行级可用", 0)}）/ `[不兼容]`（{v_all.get("❌ 运行级不兼容", 0)}）/ `[待定]`（{v_all.get("⚠️ 待定", 0)}）')
     L.append(f'- 已定位明细 {sum(vc.values())}（本列表展示口径，另 {len(entries) - sum(vc.values())} 条监测/未定位的判定暂不展示）：'

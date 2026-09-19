@@ -67,8 +67,12 @@ def wbr(s):
 
 
 def radar_version():
-    """runner 测试版本：优先取最新快照 verdict.cur_image（runner 返回的正源，如 dsh-test-runner:0.1.1-rc.2），
-    缺失时回落 data/radar-env.json（人工维护的镜像钉定锚）。"""
+    """runner 测试版本：优先 data/runner-versions.json 的 latest（runner 实测多版本中的最新，
+    与 .rt-agent-v2/results 的 runner_image_digest 同源对齐）；回落快照 cur_image → radar-env.json。"""
+    try:
+        return json.load(open(os.path.join(ROOT, 'data', 'runner-versions.json')))['latest']
+    except Exception:
+        pass
     try:
         snaps = sorted(f for f in os.listdir(SNAP_DIR) if f.endswith('.json'))
         data = json.load(open(os.path.join(SNAP_DIR, snaps[-1]), encoding='utf-8'))

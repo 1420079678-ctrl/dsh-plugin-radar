@@ -24,6 +24,11 @@ _SVG_TMPL = '''<svg xmlns="http://www.w3.org/2000/svg" width="{total}" height="2
 
 
 def current_version():
+    # 版本正源：runner-versions.json 的 latest（runner 实测多版本中的最新）；回落快照 cur_image
+    try:
+        return json.loads((ROOT / 'data' / 'runner-versions.json').read_text())['latest']
+    except Exception:
+        pass
     try:
         for fp in sorted(SNAP_DIR.glob('*.json'), reverse=True):
             d = json.loads(fp.read_text())

@@ -142,6 +142,12 @@ def main():
         n_inc = vcnt.get("⚠️ 待定", 0) or vcnt.get("待定", 0)
         n_un = g_un if isinstance(g_un, int) else vcnt.get("⏳ 未测", 0)
         img = str(v.get("cur_image", "") or "").strip()
+        try:  # 版本对齐：优先 runner 实测多版本中的最新（results.runner_image_digest 聚合）
+            import json as _j
+            _rv = _j.loads((ROOT / "data" / "runner-versions.json").read_text())
+            img = f"dsh-test-runner:{_rv.get('latest') or img}" if _rv.get('latest') else img
+        except Exception:
+            pass
         ver = (img.split(":", 1)[1] if ":" in img else img).replace("-", "--")
         n_test = n_inc + n_un
 
@@ -239,6 +245,19 @@ def main():
             print(f"[render] WARN 目录对账跳过: {_e}")
 
         # ④d 生态快照块：头行时间戳 / 静态轨行 / 跟踪 PR / 报告链接（两版块内均中文）
+        try:
+            _rvd = _j.loads((ROOT / "data" / "runner-versions.json").read_text()) if '_j' in dir() else {}
+        except Exception:
+            _rvd = {}
+        def _vk(t):
+            m = re.match(r"(\d+)\.(\d+)\.(\d+)-rc\.(\d+)$", t)
+            return (int(m.group(1)), int(m.group(2)), int(m.group(3)), int(m.group(4))) if m else (0, 0, 0, 0)
+        _vt = _rvd.get("latest") or ""
+        _vd = " · ".join(f"{t} ({sum(c.values())})" for t, c in sorted(_rvd.get("versions", {}).items(),
+                      key=lambda kv: (kv[0] == _vt, _vk(kv[0])), reverse=True)[:6])
+        t_readme = re.sub(r"^> 按版本分解.*$", "", t_readme, flags=re.M)
+        t_readme = re.sub(r"(渲染于快照 [0-9A-Za-z]+（[^\n]*）)",
+                          f"\\g<0>\n> 按版本分解 / by runner version：{_vd}" if _vd else "\\g<0>", t_readme, count=1)
         t_readme = re.sub(r"(更新于 [0-9-]+ [0-9:]+[^\n]*|渲染于快照 [0-9A-Za-z]+（[^\n]*）)",
                           f"渲染于快照 {snap['run_id']}（{bj(snap['generated_at'], '%Y-%m-%d %H:%M')}）· 数据源 data/snapshots/（渲染即对齐）",
                           t_readme, count=1)
