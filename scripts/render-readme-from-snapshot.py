@@ -113,6 +113,22 @@ def main():
         is_zh = True
         t_readme = path.read_text()
 
+
+        # ⓪ 去重自愈：徽章行与三色磁贴行历史曾叠出双份（数字不同轮互相打架）——
+        #    渲染前收敛为单份（徽章行保留首行；中文磁贴保留最后一组=最新插入；英文行同理）
+        def _dedup_lines(t, pattern, keep='first'):
+            lines = t.split('\n')
+            idx = [i for i, l in enumerate(lines) if re.match(pattern, l)]
+            if len(idx) > 1:
+                drop = idx[1:] if keep == 'first' else idx[:-1]
+                for i in reversed(drop):
+                    del lines[i]
+                t = '\n'.join(lines)
+            return t
+        t_readme = _dedup_lines(t_readme, r'^\[!\[confirmed\].*$')
+        t_readme = _dedup_lines(t_readme, r'^\[!\[运行级可用\].*$', keep='last')
+        t_readme = _dedup_lines(t_readme, r'^\[!\[runtime OK\].*$', keep='last')
+
         # ① 三徽章（两版通用）
         t_readme = re.sub(r"badge/confirmed-\d+", f"badge/confirmed-{fmt(c.get('plugins'))}", t_readme)
         t_readme = re.sub(r"badge/tested-\d+", f"badge/tested-{fmt(v.get('total'))}", t_readme)
