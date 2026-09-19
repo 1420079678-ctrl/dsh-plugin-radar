@@ -177,9 +177,13 @@ def main():
                    "| runner 版本 / version | 可用 / OK | 需适配 / adapt | 在测 / testing | 小计 / total |\n"
                    "|---|---:|---:|---:|---:|\n" + "\n".join(_vrows) + "\n"
                    f"| **累计 / cumulative** | **{n_ok}** | **{n_bad}** | **{n_test}** | **{n_ok + n_bad + n_test}** |")
-        # 替换旧磁贴行为版本表（匹配首屏磁贴行 + 其后的空行/英文磁贴行一并清理）
+        # 幂等重建：先删旧表格（若有），再替换旧磁贴行（若有）——两者取其一即可
+        t_readme = re.sub(r"\*\*判定按 runner 版本分离[\s\S]*?\| \*\*累计 / cumulative\*\*[^\n]*\n?", "", t_readme, count=1)
         t_readme = re.sub(r"^\[!\[运行级可用\][^\n]*\n(?:^$\n)?(?:^\[!\[runtime OK\][^\n]*\n)?(?:^$\n)?",
                           _vtable + "\n\n", t_readme, count=1, flags=re.M)
+        # 双保险：若旧磁贴与旧表格都已被清但表格未插入（首次迁移），在 confirmed 徽章行后插入
+        if '判定按 runner 版本分离' not in t_readme:
+            t_readme = re.sub(r"(^\[!\[confirmed\][^\n]*\n)", r"\1\n" + _vtable.replace("\\", "\\\\") + "\n\n", t_readme, count=1, flags=re.M)
         t_readme = re.sub(r"(（当前 `)[0-9A-Za-z]+(`)", rf"\g<1>{snap['run_id']}\g<2>", t_readme, count=1)
         t_readme = re.sub(r"(currently `)[0-9A-Za-z]+(`)", rf"\g<1>{snap['run_id']}\g<2>", t_readme, count=1)
 

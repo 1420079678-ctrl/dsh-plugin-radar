@@ -17,8 +17,6 @@
 
 [![confirmed](https://img.shields.io/badge/confirmed-1328-blue)](#精选插件榜) [![scan](https://img.shields.io/badge/scan-every_6h-green)](#当前生态快照) [![tested](https://img.shields.io/badge/tested-13522-orange)](#本仓库如何判定) [![dshfind](https://dshfind.com/api/badge/AdamPlatin123/dsh-plugin-radar?lang=zh)](https://dshfind.com/zh/plugins/AdamPlatin123/dsh-plugin-radar?ref=badge) [![license](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
-
-
 **判定按 runner 版本分离 / verdicts by runner version：**
 
 | runner 版本 / version | 可用 / OK | 需适配 / adapt | 在测 / testing | 小计 / total |
@@ -27,8 +25,11 @@
 | 0.1.5-rc.1 | 1380 | 1365 | 481 | 3226 |
 | 0.1.2-rc.1 | 4458 | 1426 | 174 | 6058 |
 | 0.1.1-rc.2 | 2691 | 647 | 642 | 3980 |
-| latest | 0 | 0 | 1 | 1 |
 | **累计 / cumulative** | **8551** | **3474** | **1633** | **13658** |
+
+
+
+
 
 ---
 
@@ -420,6 +421,7 @@ docs/radar/        管线文档 / pipeline docs
 <!-- AUTO:ecosystem:START -->
 > 渲染于快照 20260918T214501Z（2026-09-19 05:45 UTC+8）· 数据源 data/snapshots/（渲染即对齐）
 > 按版本分解 / by runner version：0.1.5-rc.2 (258) · 0.1.5-rc.1 (3226) · 0.1.2-rc.1 (6058) · 0.1.1-rc.2 (3980) · latest (1)
+
 
 
 
